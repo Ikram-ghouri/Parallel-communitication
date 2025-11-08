@@ -2,11 +2,11 @@ from multiprocessing import Process, Queue
 import time
 
 def producer(queue):
-    start_time = time.time()  # Start time for the producer
+    start_time = time.time()  
     for i in range(5):
         queue.put(i)
         print(f"Produced {i}")
-    end_time = time.time()  # End time for the producer
+    end_time = time.time()
     print(f"Execution time for producer: {end_time - start_time} seconds")
 
 def consumer(queue):
